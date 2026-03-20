@@ -1,0 +1,43 @@
+# ============================================================
+# CODEOWNERS — Study ABC
+# ============================================================
+# Every pull/merge request touching these paths requires
+# approval from the designated owner(s) before merge.
+#
+# GitLab: place at .gitlab/CODEOWNERS
+# GitHub : place at CODEOWNERS or .github/CODEOWNERS
+#
+# Syntax: <path-pattern>  <@user-or-group> [<@user-or-group>...]
+# Patterns are matched top-to-bottom; last match wins.
+# ============================================================
+
+# ----- Default: lead programmer reviews everything ----------
+*                               @lead-programmer
+
+# ----- SDTM programs: lead + SDTM specialist ---------------
+/programs/sdtm/*.sas            @lead-programmer @sdtm-specialist
+/programs/sdtm/**/*.sas         @lead-programmer @sdtm-specialist
+
+# ----- ADaM programs: lead + QC statistician ---------------
+/programs/adam/*.sas            @lead-programmer @qc-statistician
+/programs/adam/**/*.sas         @lead-programmer @qc-statistician
+
+# ----- TFL programs: lead + QC programmer ------------------
+/programs/tfl/*.sas             @lead-programmer @qc-programmer
+/programs/tfl/**/*.sas          @lead-programmer @qc-programmer
+
+# ----- Macro library: macro owner only ---------------------
+/macros/*.sas                   @macro-library-owner
+/macros/**/*.sas                @macro-library-owner
+
+# ----- Specs: data manager + lead programmer ---------------
+/specs/                         @data-manager @lead-programmer
+
+# ----- Config (libnames, env): lead programmer only --------
+/config/                        @lead-programmer
+
+# ----- CI/CD and repo config: lead programmer only ---------
+/.gitlab-ci.yml                 @lead-programmer
+/CODEOWNERS                     @lead-programmer
+/.gitignore                     @lead-programmer
+/Makefile                       @lead-programmer

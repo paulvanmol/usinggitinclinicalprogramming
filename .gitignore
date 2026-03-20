@@ -1,0 +1,74 @@
+# ============================================================
+# .gitignore for SAS Clinical Study Repository
+# ============================================================
+# Derived outputs — reproducible from source, never commit
+*.log
+*.lst
+
+# SAS data files — raw data is sourced from EDC/DM, not Git
+*.sas7bdat
+*.sas7bcat
+*.sas7bndx
+*.sas7bvpg
+*.sas7butl
+
+# SAS transport and export formats
+*.xpt
+*.sasxport
+*.cport
+
+# Parquet and derived data lake outputs
+*.parquet
+*.avro
+
+# Raw and incoming data — sourced from DM/EDC, not stored in Git
+rawdata/
+rawdata/sdtm/
+rawdata/transfer/
+
+# Derived SAS datasets — reproducible outputs, not source
+data/
+data/sdtm/
+data/adam/
+
+# Rendered TFL outputs
+output/
+output/tfl/
+output/listings/
+delivery/
+transfer/
+incoming/
+
+# SAS work directories
+work/
+saswork/
+sasuser/
+sasmacr/
+
+# Temporary / scratch files
+scratch/
+temp/
+tmp/
+*.tmp
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# Editor / IDE settings (keep shared settings if team agrees)
+.vscode/settings.json
+.idea/
+*.iml
+
+# Sensitive config — NEVER commit credentials
+config/passwords.ini
+config/secrets.ini
+.env
+*.env
+libname_creds.sas
+
+# (output/, delivery/ already excluded above)
