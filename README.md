@@ -25,8 +25,8 @@ The script creates the full study folder structure under your workshop root.
 
 **Windows (Command Prompt or PowerShell):**
 ```
-cd D:\workshop\training
-python exercise-materials\setup_study_repo.py --root D:\workshop --study ABC-001
+cd D:\workshop\training\exercise_materials
+python setup_study_repo.py --root D:\workshop --study ABC-001
 ```
 
 **Windows (Git Bash) / Linux / macOS:**
