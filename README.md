@@ -10,13 +10,13 @@ for clinical SAS programmers.
 ### Step 1 — Clone this repo to your workshop folder
 
 ```
-git clone https://github.com/paulvanmol/usinggitinclinicaltrialsprogramming.git D:\workshop\training
+git clone https://github.com/paulvanmol/usinggitinclinicalprogramming.git D:\workshop\training
 ```
 
 Or to a different location:
 
 ```
-git clone https://github.com/paulvanmol/usinggitinclinicaltrialsprogramming.git /path/to/workshop/training
+git clone https://github.com/paulvanmol/usinggitinclinicalprogramming.git d:/workshop/training
 ```
 
 ### Step 2 — Run the setup script
