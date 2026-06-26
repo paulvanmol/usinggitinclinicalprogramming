@@ -1,0 +1,37 @@
+{
+  "tests": [
+    {
+      "cmd": "python scripts/ci/sas_static_checks.py --root . --junit reports/sas-static-checks.xml",
+      "returncode": 0,
+      "stdout": "# SAS static checks\n\nPASSED\n\n",
+      "stderr": ""
+    },
+    {
+      "cmd": "python scripts/ci/validate_sdtm_adam_structure.py --root . --rules metadata/sdtm_adam_validation_rules.csv --report-dir reports",
+      "returncode": 0,
+      "stdout": "# SDTM/ADaM structure validation\n\nPASSED\n\n",
+      "stderr": ""
+    },
+    {
+      "cmd": "python scripts/ci/check_sas_logs.py --log-root logs --junit reports/sas-log-scan.xml",
+      "returncode": 0,
+      "stdout": "# SAS log scan\n\nPASSED\n\n",
+      "stderr": ""
+    },
+    {
+      "cmd": "python scripts/ci/validate_sdtm_adam_structure.py --root . --rules metadata/sdtm_adam_validation_rules.csv --report-dir reports_fail",
+      "returncode": 1,
+      "stdout": "# SDTM/ADaM structure validation\n\n- **ADAM.ADSL** `missing-variables` \u2014 Missing required variables: EOSSTT\n",
+      "stderr": ""
+    }
+  ],
+  "grep": {
+    "contains_pull_request": false,
+    "contains_github": false,
+    "abc001_mentions": 9,
+    "abc002_mentions": 22,
+    "gite_mail_mentions": 2,
+    "git_email_mentions": 3
+  },
+  "pass": true
+}
